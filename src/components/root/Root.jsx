@@ -7,9 +7,11 @@ function Root() {
     return (
         <>
 
-        <Header />
+        <div className='max-w-7xl mx-auto '>
+        <Header  />
         <Outlet ></Outlet>
         <Footer />
+        </div>
         
         </>
     )

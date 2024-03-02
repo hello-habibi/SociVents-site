@@ -1,9 +1,13 @@
 import React from 'react'
+import Banner from '../banner/Banner'
+import Services from '../services/Services'
 
 function Home() {
     return (
         <>
-        home page is herre horrah </>
+        <Banner ></Banner>
+        <Services></Services>
+        </>
     )
 }
 
