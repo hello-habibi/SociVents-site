@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
@@ -10,32 +10,30 @@ import Register from './components/register/Register.jsx'
 
 const router = new createBrowserRouter([
   {
-    path:'/',
-    element:<Root />,
-    children:[
+    path: '/',
+    element: <Root />,
+    children: [
       {
-        path:'/',
-        element:<Home></Home>
+        path: '/',
+        element: <Home></Home>
       },
       {
-        path:'about',
-        element:<About></About>
+        path: 'about',
+        element: <About></About>
       },
       {
-        path:'signin',
-        element:<Signin></Signin>
+        path: 'signin',
+        element: <Signin></Signin>
       },
       {
-        path:'register',
-        element:<Register></Register>
+        path: 'register',
+        element: <Register></Register>
       },
     ]
   }
 ])
-
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} ></RouterProvider>
+      <RouterProvider router={router} ></RouterProvider>
   </React.StrictMode>,
 )

@@ -1,8 +1,12 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { logOut } from '../context/AuthContext'
 
 function Header() {
 
+    const handleLogOut =()=>{
+        logOut();
+    }
     const items = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/about'}>About</NavLink></li>
@@ -37,7 +41,7 @@ function Header() {
                         <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
                     </div>
                 </div>
-                <li className='btn'><NavLink to={'/signin'}>SignIn</NavLink></li>
+                <li className='btn' onClick={handleLogOut}>  Log Out</li>
             </div>
         </div>
     )
